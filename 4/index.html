@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <main class="all-users">
+        <h1>Пользователи</h1>
+        <div><span class="all-users__total"></span><span></span></div>
+        <div class="all-users__users"></div>
+        <button class="all-users__load-button">Загрузить еще</button>
+
+        <template class="all-users__template-character template-character" id="template-character">
+            <div class="template-character__character-card card">
+                <img class="card__avatar" src="" alt="Avatar">
+                <h2 class="card__user-name"></h2>
+                <div class="card__user-email">
+                    <span>Email: </span>
+                    <span>
+                        <a href="" class="email"></a>
+                    </span>
+                </div>
+            </div>
+        </template>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
