@@ -1,10 +1,13 @@
 .all-users {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
     font-family: sans-serif;
-    margin: 30px;
+}
+
+.all-users__heading {
+    margin-bottom: 5px;
 }
 
 .pages__page-number {
@@ -15,7 +18,7 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 
@@ -32,6 +35,9 @@
 
 .card__avatar {
     border-radius: 5px;
+    height: 128px;
+    object-fit: 'cover';
+    object-position: 'center';
 }
 
 .all-users__load-button {
