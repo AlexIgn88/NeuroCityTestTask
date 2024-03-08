@@ -11,7 +11,7 @@
     text-align: center;
 }
 
-.users {
+.all-users__users {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
