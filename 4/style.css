@@ -7,7 +7,11 @@
     margin: 30px;
 }
 
-.all-users__users {
+.pages__page-number {
+    text-align: center;
+}
+
+.users {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;

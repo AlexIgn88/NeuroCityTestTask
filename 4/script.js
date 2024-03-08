@@ -24,9 +24,21 @@
             const data = await getUsersData(page);
 
             if (data) {
+                const divPageUsers = document.createElement('div');
+                const h3PageNumber = document.createElement('h3');
+                const hr = document.createElement('hr');
+                divPageUsers.classList.add(`all-users__users${page}`);
+                divPageUsers.classList.add('users');
+
+                h3PageNumber.classList.add('pages__page-number');
+                h3PageNumber.textContent = `Страница ${page}`;
+                document.querySelector('.all-users__pages').append(h3PageNumber);
+
                 const sortedUsers = data?.data.sort((a, b) => a.first_name.localeCompare(b.first_name));
 
-                sortedUsers.forEach(user => createCard(user));
+                document.querySelector('.all-users__pages').append(divPageUsers);
+                sortedUsers.forEach(user => createCard(user, page));
+                document.querySelector('.all-users__pages').append(hr);
 
                 const loadedUsers = document.querySelectorAll('.card').length;
 
@@ -47,12 +59,12 @@
             return data;
         } catch (error) {
             console.error('Произошла ошибка:', error.message);
-            document.querySelector('.all-users__users').append(`Произошла ошибка: ${error.message} `);
+            document.querySelector('.all-users__error').append(`Произошла ошибка: ${error.message} `);
         }
     }
 
     //функция для создания карточки пользователя по темплейту в HTML
-    function createCard(user) {
+    function createCard(user, page) {
         const template = document.querySelector('#template-character'),
             fragment = template.content.cloneNode(true);
 
@@ -61,6 +73,6 @@
         fragment.querySelector('.card__user-email .email').textContent = user.email;
         fragment.querySelector('.card__user-email .email').href = `mailto:${user.email}`;
 
-        document.querySelector('.all-users__users').append(fragment);
+        document.querySelector(`.all-users__users${page}`).append(fragment);
     }
 })();
