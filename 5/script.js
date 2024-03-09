@@ -28,7 +28,7 @@ const registrationFormValidation = (function () {
         const isPasswordValid = validatePassword();
         const isConfirmPasswordValid = validateConfirmPassword();
         if (isNameValid && isPhoneValid && isPasswordValid && isConfirmPasswordValid) {
-            alert('Форма отправлена');
+            alert('Регистрация завершена!');
             form.reset();
         }
     }

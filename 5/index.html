@@ -9,29 +9,32 @@
 </head>
 
 <body>
-    <form class="registration-form">
-        <label>
-            <span>Имя:</span>
-            <input type="text" id="form-name" name="form-name" required>
-            <div class="registration-form__error" id="form-name-error"></div>
-        </label>
-        <label>
-            Телефон:
-            <input type="text" id="form-phone" name="form-phone" required>
-            <div class="registration-form__error" id="form-phone-error"></div>
-        </label>
-        <label>
-            Пароль:
-            <input type="password" id="form-password" name="form-password" required>
-            <div class="registration-form__error" id="form-password-error"></div>
-        </label>
-        <label>
-            Повторите пароль:
-            <input type="password" id="form-confirm-password" name="form-confirm-password" required>
-            <div class="registration-form__error" id="form-confirm-password-error"></div>
-        </label>
-        <button type="submit">Отправить</button>
-    </form>
+    <main>
+        <form class="registration-form">
+            <h3>Регистрация</h3>
+            <label>
+                <span>Имя:</span>
+                <input type="text" placeholder="Укажите имя" id="form-name" name="form-name" required>
+                <div class="registration-form__error" id="form-name-error"></div>
+            </label>
+            <label>
+                Телефон:
+                <input type="text" placeholder="Укажите телефон" id="form-phone" name="form-phone" required>
+                <div class="registration-form__error" id="form-phone-error"></div>
+            </label>
+            <label>
+                Пароль:
+                <input type="password" placeholder="Введите пароль" id="form-password" name="form-password" required>
+                <div class="registration-form__error" id="form-password-error"></div>
+            </label>
+            <label>
+                Повторите пароль:
+                <input type="password" placeholder="Подтвердите пароль" id="form-confirm-password" name="form-confirm-password" required>
+                <div class="registration-form__error" id="form-confirm-password-error"></div>
+            </label>
+            <button type="submit">Отправить</button>
+        </form>
+    </main>
     <script src="script.js"></script>
 </body>
 
