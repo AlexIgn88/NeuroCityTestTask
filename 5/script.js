@@ -2,7 +2,7 @@
 
 //чтобы не засорять глобальную область видимости записал в константу IIFE
 const registrationFormValidation = (function () {
-    
+
     //Записываю в константы элементы
     const
         form = document.querySelector('.registration-form'),
@@ -28,10 +28,13 @@ const registrationFormValidation = (function () {
         const isPasswordValid = validatePassword();
         const isConfirmPasswordValid = validateConfirmPassword();
         if (isNameValid && isPhoneValid && isPasswordValid && isConfirmPasswordValid) {
-            alert('Регистрация завершена!');
+            toggleModalWindow();
             form.reset();
         }
     }
+
+    //Функция-слушатель для закрытия модального окна при нажатии по кнопке
+    document.querySelector('.notification__close-modal-window').addEventListener('click', () => toggleModalWindow());
 
     //Этой функцией проверяю имя
     function validateName() {
@@ -111,4 +114,11 @@ const registrationFormValidation = (function () {
         messageErrorElem.textContent = text;
         return false;
     }
+
+    //Функция открывает модальное окно
+    function toggleModalWindow() {
+        const modalWindow = document.querySelector('.modal-window');
+        modalWindow.classList.toggle('modal-window-hide');
+    }
+
 })();

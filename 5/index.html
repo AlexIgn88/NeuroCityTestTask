@@ -29,11 +29,20 @@
             </label>
             <label>
                 Повторите пароль:
-                <input type="password" placeholder="Подтвердите пароль" id="form-confirm-password" name="form-confirm-password" required>
+                <input type="password" placeholder="Подтвердите пароль" id="form-confirm-password"
+                    name="form-confirm-password" required>
                 <div class="registration-form__error" id="form-confirm-password-error"></div>
             </label>
             <button type="submit">Отправить</button>
         </form>
+
+        <div class="modal-window modal-window-hide">
+            <div class="modal-window__notification notification">
+                <div>Регистрация завершена!</div>
+                    <button class="notification__close-modal-window">ок</button>
+            </div>
+        </div>
+
     </main>
     <script src="script.js"></script>
 </body>
